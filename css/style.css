@@ -205,7 +205,7 @@
 
 /*** About ***/
 .about {
-    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url(../img/about.jpg) left center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url(../img/herobg.jpg) left center no-repeat;
     background-size: cover;
 }
 
@@ -428,7 +428,7 @@
     box-shadow: 0 0 45px rgba(0, 0, 0, .07);
 }
 
-.team-item .team-social {
+.team-item .team-social { 
     position: absolute;
     display: flex;
     justify-items:baseline;
