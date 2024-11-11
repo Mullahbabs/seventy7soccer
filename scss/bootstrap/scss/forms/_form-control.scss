@@ -23,7 +23,7 @@
   @include transition($input-transition);
 
   &[type="file"] {
-    overflow: hidden; // prevent pseudo element button overlap
+    overflow-y: scroll; // prevent pseudo element button overlap
 
     &:not(:disabled):not(:read-only) {
       cursor: pointer;
@@ -127,6 +127,7 @@
   background-color: transparent;
   border: solid transparent;
   border-width: $input-border-width 0;
+  overflow-y: scroll;
 
   &.form-control-sm,
   &.form-control-lg {
