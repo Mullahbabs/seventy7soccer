@@ -556,7 +556,16 @@
     }
 }
 
-
+/* Style for the Waiver Container */
+.waiver-container {
+    max-height: 150px; /* Set the max height for scrollability */
+    overflow-y: scroll; /* Enables vertical scroll if content exceeds max height */
+    padding: 10px;
+    border: 1px solid #ccc; /* Optional: border for visual separation */
+    background-color: #f9f9f9; /* Light background for readability */
+    margin-bottom: 10px; /* Space between waiver and checkbox */
+  }
+  
 /*** Footer ***/
 .footer {
     color: #B0B9AE;
