@@ -412,7 +412,7 @@
                             </div>
                         </div>
                         <div class="col-12 text-center">
-                            <button class="btn btn-primary w-100 py-3" type="submit">Submit Now</button>
+                            <button class="btn btn-primary w-100 py-3" id="submitButton" type="submit">Submit Now</button>
                         </div>
                     </div>
                 </div>
@@ -507,6 +507,86 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+        import  {getStorage} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-storage.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyDWu1PjZ0R5-2KJc1PYuWZK19MrWT0d58Q",
+          authDomain: "seventy7sports-5f62b.firebaseapp.com",
+          projectId: "seventy7sports-5f62b",
+          storageBucket: "seventy7sports-5f62b.firebasestorage.app",
+          messagingSenderId: "770203089833",
+          appId: "1:770203089833:web:9c36ab2012a95e20f1a2b8",
+          measurementId: "G-ZSPG8Z92QX"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app); 
+        const db = firebase.firestore();
+        const storage = firebase.storage();
+        
+        document.getElementById("submitButton").addEventListener("click", async (e) => {
+            e.preventDefault(); // Prevent form default submission behavior
+            
+            const formData = {
+                teamname: document.getElementById("teamname").value,
+                coachname: document.getElementById("coachname").value,
+                managername: document.getElementById("managername").value,
+                coachmail: document.getElementById("coachmail").value,
+                coachmobile: document.getElementById("coachmobile").value,
+                managermobile: document.getElementById("managermobile").value,
+                players: []
+            };
+        
+            // Collect player data
+            for (let i = 1; i <= 8; i++) {
+                const player = {
+                    name: document.getElementById(`player${i}name`).value,
+                    idCardType: document.getElementById(`cardtype`).value
+                };
+        
+                // Upload player ID card
+                const fileInput = document.getElementById(`player${i}id`);
+                if (fileInput.files.length > 0) {
+                    const file = fileInput.files[0];
+                    const storageRef = storage.ref(`player-id-cards/player${i}/${file.name}`);
+                    const snapshot = await storageRef.put(file);
+                    player.idCardURL = await snapshot.ref.getDownloadURL();
+                }
+        
+                formData.players.push(player);
+            }
+        
+            // Upload team logo
+            const teamLogoInput = document.getElementById("teamlogo");
+            if (teamLogoInput.files.length > 0) {
+                const logoFile = teamLogoInput.files[0];
+                const logoRef = storage.ref(`team-logos/${logoFile.name}`);
+                const logoSnapshot = await logoRef.put(logoFile);
+                formData.teamLogoURL = await logoSnapshot.ref.getDownloadURL();
+            }
+        
+            // Submit to Firestore
+            try {
+                await db.collection("teams").add(formData);
+                alert("Form submitted successfully!");
+            } catch (error) {
+                console.error("Error submitting form: ", error);
+                alert("Error submitting form. Please try again.");
+            }
+        });
+        
+
+      </script>
 </body>
 
 </html>
