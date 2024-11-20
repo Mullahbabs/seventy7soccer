@@ -132,298 +132,338 @@
 
     <!-- Quote Start -->
     <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="display-5 fw-medium text-primary">FEMALE SPORTS TOURNAMENT - FEBRUARY 2025</h1>
-                    <h2 class=" mb-4">Event Info</h2>
-                    <p style="font-weight: bolder;">Order of events:<br>
-                        7th February 2025 - opening ceremony<br>
-                        8th February 2025 - Final games and Award ceremony<br>
-                        9th February 2025 - Thanksgiving
-                    </p>
-                    <h2 class="mb-4">Venue</h2>
-                    <p style="font-weight: bolder;">St. Patricks College-Field Ikot Ansa Calabar</p>
-                    <h2 class="mb-4" style="font-weight: bolder;">Tournament Objectives</h2>
-                    <p style="font-weight: bolder;">Group of Eight Teams: Played as two brackets of four. The winner of each 
-                        bracket in Round-Robin Play will advance to the final to determine the Champion and Finalist - with second placed teams in each bracket playing for 3rd place(consolation).</p>    
-                    <p class="text-danger"><strong> ATTENTION ATTENTION ATTENTION!!!</strong> <br> <span class="text-dark" style="font-weight: bolder;">Please carefully review the document titled<span class="text-danger" style="font-weight: bolder;"> IMPORTANT </span> for complete guidelines and essential 
-                        information regarding this event. Ensure you fully understand all procedures and requirements outlined in the document before proceeding with the registration form. Note that all criteria and guidelines are expected to be
-                         followed strictly, and failure to comply due to lack of awareness will not be accepted as an excuse at any stage of the event either before, during or after.
-                    </p>
-                    <p class="mb-4"></p>
-                    <a class="d-inline-flex align-items-center rounded overflow-hidden border border-primary" href="img/doc.pdf">
-                        <span class="btn-lg-square bg-primary" style="width: 55px; height: 55px;">
-                            <i class="fa fa-file text-white" style="font-weight:bolder"></i>
-                        </span>
-                        <span class="fs-5 fw-medium mx-4 text-danger">IMPORTANT!!!</span>
-                        <button class="btn btn-primary">
-                            <input type="checkbox" required>
-                        </button>
-                    </a>
-                    <p class="text-primary" style="font-weight: bolder;">Kindly check the box above to confirm that you have read and understood all guidelines before submitting the form.</p>
-                </div> 
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <h2 class="mb-4">Registration Form</h2>
-                    <p style="font-weight: bolder;">complete the form below carefully, ensuring that all information provided is accurate before submission.</p>
-                    <p style="font-weight: bolder;">Teams will be contacted with further instructions upon information verification &amp; validation</p>
+    <div class="container">
+        <div class="row g-5">
+            <!-- Event Details Section -->
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <h1 class="display-5 fw-medium text-primary">FEMALE SPORTS TOURNAMENT - FEBRUARY 2025</h1>
+                <h2 class="mb-4">Event Info</h2>
+                <p class="fw-bold">
+                    Order of events:<br>
+                    7th February 2025 - Opening Ceremony<br>
+                    8th February 2025 - Final Games and Award Ceremony<br>
+                    9th February 2025 - Thanksgiving
+                </p>
+                <h2 class="mb-4">Venue</h2>
+                <p class="fw-bold">St. Patrick's College Field, Ikot Ansa, Calabar</p>
+                <h2 class="mb-4 fw-bold">Tournament Objectives</h2>
+                <p class="fw-bold">
+                    Group of Eight Teams: Played as two brackets of four. The winner of each 
+                    bracket in Round-Robin Play will advance to the final to determine the Champion and Finalist. 
+                    Second-placed teams in each bracket will play for 3rd place (Consolation Match).
+                </p>
+                <p class="text-danger fw-bold">
+                    <strong>ATTENTION! ATTENTION! ATTENTION!</strong><br>
+                    <span class="text-dark fw-bold">
+                        Please carefully review the document titled 
+                        <span class="text-danger fw-bold">"IMPORTANT"</span> for complete guidelines and essential 
+                        information regarding this event. Ensure you fully understand all procedures and requirements 
+                        outlined in the document before proceeding with the registration form. Failure to comply due to 
+                        lack of awareness will not be accepted as an excuse at any stage of the event.
+                    </span>
+                </p>
+                <a class="d-inline-flex align-items-center rounded overflow-hidden border border-primary mb-3" href="img/doc.pdf" target="_blank">
+                    <span class="btn-lg-square bg-primary text-white" style="width: 55px; height: 55px;">
+                        <i class="fa fa-file fw-bold"></i>
+                    </span>
+                    <span class="fs-5 fw-medium mx-4 text-danger">IMPORTANT!!!</span>
+                </a>
+                <p class="text-primary fw-bold">
+                    Kindly check the box below to confirm that you have read and understood all guidelines before submitting the form.
+                </p>
+                <label>
+                    <input type="checkbox" required> I have read and understood the guidelines.
+                </label>
+            </div>
+
+            <!-- Registration Form Section -->
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <h2 class="mb-4">Registration Form</h2>
+                <p class="fw-bold">
+                    Complete the form below carefully, ensuring that all information provided is accurate before submission.
+                </p>
+                <p class="fw-bold">
+                    Teams will be contacted with further instructions upon information verification & validation.
+                </p>
+                <form action="submit_form.php" method="POST" enctype="multipart/form-data">
                     <div class="row g-3">
+                        <!-- Team Details -->
                         <div class="col-sm-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" name="teamname" id="teamname" placeholder="teamname" required>
+                                <input type="text" class="form-control" name="teamname" id="teamname" placeholder="Team Name" required>
                                 <label for="teamname">Team Name</label>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-floating">
-                                <input type="file" class="form-control" name="teamlogo" id="teamlogo" placeholder="teamlogo" required>
+                                <input type="file" class="form-control" name="teamlogo" id="teamlogo" required>
                                 <label for="teamlogo">Team Logo</label>
                             </div>
                         </div>
+
+                        <!-- Player Details -->
+                        <div id="player-details">
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="player1" id="player1name" placeholder="Player 1 Name" required>
+                                        <label for="player1name">Player 1 Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="file" class="form-control" name="player1id" id="player1id" required>
+                                        <label for="player1id">Player 1 ID Card</label>
+                                    </div>
+                                    <select class="form-select mt-2" name="player1idtype" required>
+                                        <option value="" disabled selected>Select ID Type</option>
+                                        <option value="NIN">NIN</option>
+                                        <option value="Drivers">Driver's License</option>
+                                        <option value="Voters">Voter's Card</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="player2" id="player2name" placeholder="Player 2 Name" required>
+                                        <label for="player1name">Player 2 Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="file" class="form-control" name="player2id" id="player2id" required>
+                                        <label for="player2id">Player 2 ID Card</label>
+                                    </div>
+                                    <select class="form-select mt-2" name="player2idtype" required>
+                                        <option value="" disabled selected>Select ID Type</option>
+                                        <option value="NIN">NIN</option>
+                                        <option value="Drivers">Driver's License</option>
+                                        <option value="Voters">Voter's Card</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="player3" id="player3name" placeholder="Player 3 Name" required>
+                                        <label for="player3name">Player 3 Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="file" class="form-control" name="player3id" id="player3id" required>
+                                        <label for="player3id">Player 3 ID Card</label>
+                                    </div>
+                                    <select class="form-select mt-2" name="player3idtype" required>
+                                        <option value="" disabled selected>Select ID Type</option>
+                                        <option value="NIN">NIN</option>
+                                        <option value="Drivers">Driver's License</option>
+                                        <option value="Voters">Voter's Card</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="player4" id="player4name" placeholder="Player 4 Name" required>
+                                        <label for="player4name">Player 4 Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="file" class="form-control" name="player4id" id="player4id" required>
+                                        <label for="player4id">Player 4 ID Card</label>
+                                    </div>
+                                    <select class="form-select mt-2" name="player4idtype" required>
+                                        <option value="" disabled selected>Select ID Type</option>
+                                        <option value="NIN">NIN</option>
+                                        <option value="Drivers">Driver's License</option>
+                                        <option value="Voters">Voter's Card</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="player5" id="player5name" placeholder="Player 5 Name" required>
+                                        <label for="player5name">Player 5 Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="file" class="form-control" name="player5id" id="player5id" required>
+                                        <label for="player5id">Player 5 ID Card</label>
+                                    </div>
+                                    <select class="form-select mt-2" name="player5idtype" required>
+                                        <option value="" disabled selected>Select ID Type</option>
+                                        <option value="NIN">NIN</option>
+                                        <option value="Drivers">Driver's License</option>
+                                        <option value="Voters">Voter's Card</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="player6" id="player6name" placeholder="Player 6 Name" required>
+                                        <label for="player6name">Player 6 Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="file" class="form-control" name="player6id" id="player6id" required>
+                                        <label for="player6id">Player 6 ID Card</label>
+                                    </div>
+                                    <select class="form-select mt-2" name="player6idtype" required>
+                                        <option value="" disabled selected>Select ID Type</option>
+                                        <option value="NIN">NIN</option>
+                                        <option value="Drivers">Driver's License</option>
+                                        <option value="Voters">Voter's Card</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="player7" id="player7name" placeholder="Player 7 Name" required>
+                                        <label for="player7name">Player 7 Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="file" class="form-control" name="player7id" id="player7id" required>
+                                        <label for="player7id">Player 7 ID Card</label>
+                                    </div>
+                                    <select class="form-select mt-2" name="player7idtype" required>
+                                        <option value="" disabled selected>Select ID Type</option>
+                                        <option value="NIN">NIN</option>
+                                        <option value="Drivers">Driver's License</option>
+                                        <option value="Voters">Voter's Card</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="player8" id="player8name" placeholder="Player 8 Name" required>
+                                        <label for="player8name">Player 8 Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="file" class="form-control" name="player8id" id="player8id" required>
+                                        <label for="player8id">Player 8 ID Card</label>
+                                    </div>
+                                    <select class="form-select mt-2" name="player8idtype" required>
+                                        <option value="" disabled selected>Select ID Type</option>
+                                        <option value="NIN">NIN</option>
+                                        <option value="Drivers">Driver's License</option>
+                                        <option value="Voters">Voter's Card</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Coach Details -->
                         <div class="col-sm-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" name="player1" id="player1name" placeholder="player 1" required>
-                                <label for="player1">Player 1</label>
+                                <input type="text" class="form-control" name="coachname" id="coachname" placeholder="Coach Name" required>
+                                <label for="coachname">Coach Name</label>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-floating">
-                                <input type="file" class="form-control" name="player1id" id="player1id" placeholder="Player ID-CARD" required>
-                                <label for="player2">Player ID-CARD</label>
-                                <button class="btn btn-primary" type="button" id="selectButton">
-                                <select class="form-select text-primary" id="cardtype" required>
-                                    <option selected>ID TYPE</option>
-                                    <option value="national">NIN</option>
-                                    <option value="drivers">Drivers License</option>
-                                    <option value="voters">Voters Card</option>
-                                </select>
-                                </button>
+                                <input type="file" class="form-control" name="coachid" id="coachid" required>
+                                <label for="coachid">Coach ID Card</label>
+                            </div>
+                            <select class="form-select mt-2" name="coachidtype" required>
+                                <option value="" disabled selected>Select ID Type</option>
+                                <option value="NIN">NIN</option>
+                                <option value="Drivers">Driver's License</option>
+                                <option value="Voters">Voter's Card</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" name="coachname" id="managername" placeholder="Manager Name" required>
+                                <label for="managername">Manager Name</label>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" name="player2" id="player2name" placeholder="Player 2" required>
-                                <label for="player2name">Player 2</label>
+                                <input type="file" class="form-control" name="Managerid" id="managerid" required>
+                                <label for="managerid">Manager ID Card</label>
+                            </div>
+                            <select class="form-select mt-2" name="manageridtype" required>
+                                <option value="" disabled selected>Select ID Type</option>
+                                <option value="NIN">NIN</option>
+                                <option value="Drivers">Driver's License</option>
+                                <option value="Voters">Voter's Card</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" name="coachemail" id="coachemail" placeholder="Coach email" required>
+                                <label for="coachemail">Coach Email</label>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-floating">
-                                <input type="file" class="form-control" name="player2id" id="player2id" placeholder="Player ID-CARD" required>
-                                <label for="player2id">Player ID-CARD</label>
-                                <button class="btn btn-primary" type="button" id="selectButton">
-                                <select class="form-select text-primary" id="cardtype" required>
-                                    <option selected>ID TYPE</option>
-                                    <option value="national">NIN</option>
-                                    <option value="drivers">Drivers License</option>
-                                    <option value="voters">Voters Card</option>
-                                </select>
-                                </button>
+                                <input type="number" class="form-control" name="coachmobile" id="coachmobile" placeholder="Coach Mobile" required>
+                                <label for="coachmobile">Coach Mobile</label>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" name="player3" id="player3name" placeholder="Player 3" required>
-                                <label for="player3name">Player 3</label>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="file" class="form-control" name="player3id" id="player3id" placeholder="Player ID-CARD" required>
-                                <label for="player3id">Player ID-CARD</label>
-                                <button class="btn btn-primary" type="button" name="selectbutton" id="selectButton">
-                                <select class="form-select text-primary" id="cardtype" required>
-                                    <option selected>ID TYPE</option>
-                                    <option value="national">NIN</option>
-                                    <option value="drivers">Drivers License</option>
-                                    <option value="voters">Voters Card</option>
-                                </select>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" name="player4" id="player4name" placeholder="Player 4" required>
-                                <label for="player4name">Player 4</label>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="file" class="form-control" name="player4id" id="player4id" placeholder="Player ID-CARD" required>
-                                <label for="player4id">Player ID-CARD</label>
-                                <button class="btn btn-primary" type="button" id="selectButton">
-                                <select class="form-select text-primary" id="cardtype" required>
-                                    <option selected>ID TYPE</option>
-                                    <option value="national">NIN</option>
-                                    <option value="drivers">Drivers License</option>
-                                    <option value="voters">Voters Card</option>
-                                </select>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" name="player5" id="player5name" placeholder="Player 5" required>
-                                <label for="player5name">Player 5</label>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="file" class="form-control" name="player5id" id="player5id" placeholder="Player ID-CARD" required>
-                                <label for="player5id">Player ID-CARD</label>
-                                <button class="btn btn-primary" type="button" id="selectButton">
-                                <select class="form-select text-primary" id="cardtype" required>
-                                    <option selected>ID TYPE</option>
-                                    <option value="national">NIN</option>
-                                    <option value="drivers">Drivers License</option>
-                                    <option value="voters">Voters Card</option>
-                                </select>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" name="player6" id="player6name" placeholder="Player 6" required>
-                                <label for="player6name">Player 6</label>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">  
-                                <input type="file" class="form-control" name="player6id" id="player6id" placeholder="Player ID-CARD" required>
-                                <label for="player6id">Player ID-Card</label>
-                                <button class="btn btn-primary" type="button" id="selectButton">
-                                <select class="form-select text-primary" id="cardtype" required>
-                                    <option selected>ID TYPE</option>
-                                    <option value="national">NIN</option>
-                                    <option value="drivers">Drivers License</option>
-                                    <option value="voters">Voters Card</option>
-                                </select>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" name="player7" id="player7name" placeholder="Player 7" required>
-                                <label for="player7">Player 7</label>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="file" class="form-control" name="player7id" id="player7id" placeholder="Player ID-CARD" required>
-                                <label for="player7id">Player ID-CARD</label>
-                                <button class="btn btn-primary" type="button" id="selectButton">
-                                <select class="form-select text-primary" id="cardtype" required>
-                                    <option selected>ID TYPE</option>
-                                    <option value="national">NIN</option>
-                                    <option value="drivers">Drivers License</option>
-                                    <option value="voters">Voters Card</option>
-                                </select>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" name="player8" id="player8name" placeholder="Player 8" required>
-                                <label for="player8name">Player 8</label>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="file" class="form-control" name="player8id" id="player8id" placeholder="Player ID-CARD" required>
-                                <label for="player8id">Player ID-CARD</label>
-                                <button class="btn btn-primary" type="button" id="selectButton">
-                                <select class="form-select text-primary" id="cardtype" required>
-                                    <option selected>ID TYPE</option>
-                                    <option value="national">NIN</option>
-                                    <option value="drivers">Drivers License</option>
-                                    <option value="voters">Voters Card</option>
-                                </select>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" id="coachname" placeholder="Coach Name" required>
-                                <label for="coachname">Coach</label>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="file" class="form-control" id="coachid" placeholder="Coach ID-CARD" required>
-                                <label for="coachid">Coach ID-CARD</label>
-                                <button class="btn btn-primary" type="button" id="selectButton">
-                                <select class="form-select text-primary" id="cardtype" required>
-                                    <option selected>ID TYPE</option>
-                                    <option value="national">NIN</option>
-                                    <option value="drivers">Drivers License</option>
-                                    <option value="voters">Voters Card</option>
-                                </select>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" name="manager" id="managername" placeholder="Manager Name" required>
-                                <label for="managername">Manager</label>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="file" class="form-control" name="managerid" id="managerid" placeholder="Manager ID-CARD" required>
-                                <label for="managerid">Manager ID-CARD</label>
-                                <button class="btn btn-primary" type="button" id="selectButton">
-                                <select class="form-select text-primary" id="cardtype" required>
-                                    <option selected>ID TYPE</option>
-                                    <option value="national">NIN</option>
-                                    <option value="drivers">Drivers License</option>
-                                    <option value="voters">Voters Card</option>
-                                </select>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="email" class="form-control" name="coachmail" id="coachmail" placeholder="Coach Email" required>
-                                <label for="coachmail">Coach/Manager Email</label>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="number" class="form-control" name="coachmobile" id="coachmobile" placeholder="Manager Email" required>
-                                <label for="managermail">Coach Mobile</label>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="number" class="form-control" name="managermobile" id="managermobile" placeholder="Coach Mobile" required>
-                                <label for="coachmobile">Manager Mobile</label>
+                                <input type="number" class="form-control" name="managermobile" id="managermobile" placeholder="Manager Mobile" required>
+                                <label for="managermobile">Manager Mobile</label>
                             </div>
                         </div>
                         <div class="col-12">
-                             <div class="nav-item dropdown form-floating">
-                               <p class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Waiver & Release Liability</p>
-                               <div class="dropdown-menu bg-white w-100 rounded-0 rounded-bottom m-0">
-                                   <p> I the undersigned, hereby certify that to the best of my knowledge, we are  physically able to safely participate in the sports activity for which we have been registered.</p>
-                                   <p> I, for myself and on behalf of my team, assigns, and next of kin,<span class="text-primary">HEREBY RELEASE AND HOLD HARMLESS</span> Seventy7soccer, their officers, officials, and/or employees, other participants, 
-                                    sponsors, advertisers, and if applicable, owners and lessors of premises used to conduct the event <span class="text-primary">(“RELEASEES”), WITH RESPECT TO ANY AND ALL INJURY, ILLNESS, DISABILITY, DEATH,</span> or loss or damage to person or property,
-                                    <span class="text-primary"> WHETHER ARISING FROM THE NEGLIGENCE OF THE RELEASEES OR OTHERWISE,</span> to the fullest extent permitted by law.</p>
-                                    <p> I understand that at this event or related activities, I may be photographed. I agree to allow my photo, video, or film likeness to be used for any legitimate purpose by the event holders, producers, sponsors, organizers, and assigns.</p>
-                               </div>
-                               <button class="btn btn-primary">
-                                <input type="checkbox" required> i Accept this Waiver
-                            </button> 
+                            <div class="form-group">
+                              <!-- Waiver Label -->
+                              <label for="waiverDropdown" class="form-label text-primary" style="font-weight: bolder;">Waiver & Release of Liability</label>
+                              
+                              <!-- Dropdown Trigger -->
+                              <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle text-primary" style="font-weight:bolder" id="waiverDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Read Waiver
+                                </a>
+                                
+                                <!-- Dropdown Content -->
+                                <div class="dropdown-menu bg-white p-3 w-100" aria-labelledby="waiverDropdown">
+                                  <p>I, the undersigned, hereby certify that to the best of my knowledge, we are physically able to safely participate in the sports activity for which we have been registered.</p>
+                                  <p>I, for myself and on behalf of my team, assigns, and next of kin, <span class="text-primary">HEREBY RELEASE AND HOLD HARMLESS</span> Seventy7soccer, their officers, officials, and/or employees, other participants, sponsors, advertisers, and if applicable, owners and lessors of premises used to conduct the event <span class="text-primary">(“RELEASEES”)</span>, WITH RESPECT TO ANY AND ALL INJURY, ILLNESS, DISABILITY, DEATH, or loss or damage to person or property, <span class="text-primary">WHETHER ARISING FROM THE NEGLIGENCE OF THE RELEASEES OR OTHERWISE</span>, to the fullest extent permitted by law.</p>
+                                  <p>I understand that at this event or related activities, I may be photographed. I agree to allow my photo, video, or film likeness to be used for any legitimate purpose by the event holders, producers, sponsors, organizers, and assigns.</p>
+                                </div>
+                              </div>
+                              
+                              <!-- Accept Checkbox -->
+                              <div class="form-check mt-3">
+                                <input type="checkbox" class="form-check-input" id="waiverAccept" required>
+                                <label for="waiverAccept" class="form-check-label">
+                                  I accept this waiver
+                                </label>
+                              </div>
                             </div>
-                        </div>
-                        <div class="col-12 text-center">
-                            <button class="btn btn-primary w-100 py-3" id="submitB Button" type="submit">Submit Now</button>
+                          </div>
+                          
+
+                        <!-- Submit Button -->
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3" type="submit">Submit Registration</button>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
     <!-- Quote Start -->
      
-<!-- Team Start -->
+     
+    <!-- Team Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
@@ -532,7 +572,7 @@
         </div>
     </div>
     <!-- Footer End -->
-
+ 
 
     <!-- Copyright Start -->
     <div class="container-fluid copyright py-4">
@@ -567,6 +607,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
 
     <script type="module">
         // Import the functions you need from the SDKs you need
