@@ -153,7 +153,7 @@
                 <p class="fw-bold">
                     Teams will be contacted with further instructions upon information verification & validation.
                 </p>
-                <form action="submit_form.php" method="POST" enctype="multipart/form-data">
+                <form action="submit_form.php" method="POST" id="registration" enctype="multipart/form-data">
                     <div class="row g-3">
                         <!-- Team Details -->
                         <div class="col-sm-6">
@@ -590,7 +590,56 @@
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
-      </script>
+
+        const form = document.getElementById('seventy7registration');
+    form.addEventListener('submit', (event) => {
+     event.preventDefault(); // Prevent default form submission
+
+    // Get form data
+    const formData = {
+        teamname: document.getElementById("teamname").value,
+        coachname: document.getElementById("coachname").value,
+        managername: document.getElementById("managername").value,
+        coachmail: document.getElementById("coachmail").value,
+        coachmobile: document.getElementById("coachmobile").value,
+        managermobile: document.getElementById("managermobile").value,
+        players: []
+    };
+
+    // Collect player data
+    for (let i = 1; i <= 8; i++) {
+        const player = {
+            name: document.getElementById(`player${i}name`).value,
+            idCardType: document.getElementById(`cardtype`).value
+        };
+
+        // Upload player ID card   
+        const fileInput = document.getElementById(`player${i}id`);
+        if (fileInput.files.length > 0) {
+            const file = fileInput.files[0];
+            const storageRef = storage.ref(`player-id-cards/player${i}/${file.name}`);
+            const snapshot = await storageRef.put(file);
+            player.idCardURL = await snapshot.ref.getDownloadURL();
+        }
+
+        formData.players.push(player);
+    }
+
+    // Upload team logo
+    const teamLogoInput = document.getElementById("teamlogo");
+    if (teamLogoInput.files.length > 0) {
+        const logoFile = teamLogoInput.files[0];
+        const logoRef = storage.ref(`team-logos/${logoFile.name}`);
+        const logoSnapshot = await logoRef.put(logoFile);
+        formData.teamLogoURL = await logoSnapshot.ref.getDownloadURL();
+    }
+});
+
+  // Optionally, display a success message
+  alert('Form submitted successfully!');
+});
+
+    </script>
 </body>
 
 </html>  

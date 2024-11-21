@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Email configuration
-    $to = "bennybeshel@gmail.com";
+    $to = "https://console.firebase.google.com/u/0/project/seventy7registration/database/seventy7registration-default-rtdb/data/~2F";
     $subject = "New Registration Form Submission";
     $headers = "From: no-reply@example.com\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
