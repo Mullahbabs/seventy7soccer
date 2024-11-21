@@ -51,9 +51,9 @@
                     <h2 class="text-white fw-bold m-0">Seventy7Soccer</h2>
                 </a>
                 <div class="ms-auto d-flex align-items-center">
-                    <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>7 edemekpeyong st. Calabar, NG.</small>
-                    <small class="ms-4"><i class="fa fa-envelope me-3"></i>info@seventy7soccer.com</small>
-                    <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>+234 293 9540</small>
+                    <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>10 Ibrahim Bomai. Guzape Abuja, NG.</small>
+                    <small class="ms-4"><i class="fa fa-envelope me-3"></i>bellahteck@gmail.com</small>
+                    <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>+234 816 054 9506</small>
                     <div class="ms-3 d-flex">
                         <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
                                 class="fab fa-facebook-f"></i></a>
@@ -82,30 +82,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav">
-                        <a href="" class="nav-item nav-link">Home</a>
-                        <a href="" class="nav-item nav-link">About</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Academies</a>
-                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                                <a href="" class="dropdown-item">kiddies</a>
-                                <a href="" class="dropdown-item">Teen</a>
-                                <a href="" class="dropdown-item">Youths</a>
-                            </div>
-                        </div>     
-                        <a href="" class="nav-item nav-link">Projects</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">More</a>
-                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                                <a href="" class="dropdown-item">Event Gallery</a>
-                                <a href="" class="dropdown-item">Our Team</a>
-                                <a href="" class="dropdown-item">Upcoming Events</a>
-                                <a href="registration.html" class="dropdown-item active">Registration</a>
-                            </div>
-                        </div>
-                        <a href="" class="nav-item nav-link">Contact</a>
-                    </div>
-                    <div class="ms-auto d-none d-lg-block">
-                        <a href="registration.html" class="btn btn-primary rounded-pill py-2 px-3">Registration</a>
+                        <a href="" class="nav-item nav-link text-primary" style="font-weight: bolder;">Welcome</a>
                     </div>
                 </div>
             </nav>
@@ -136,21 +113,19 @@
         <div class="row g-5">
             <!-- Event Details Section -->
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <h1 class="display-5 fw-medium text-primary">FEMALE SPORTS TOURNAMENT - FEBRUARY 2025</h1>
-                <h2 class="mb-4">Event Info</h2>
+                <h1 class="display-5 fw-medium text-primary">CALABAR FEMALE SPORTS TOURNAMENT - FEBRUARY 2025</h1>
+                <h2 class="mb-4">Order Of Events</h2>
                 <p class="fw-bold">
-                    Order of events:<br>
-                    7th February 2025 - Opening Ceremony<br>
-                    8th February 2025 - Final Games and Award Ceremony<br>
-                    9th February 2025 - Thanksgiving
+                    7th February 2025 - 1st & 2nd rounds of group games<br>
+                    8th February 2025 - 3rd round, Semi-Final & Championship games<br>
+                    Award Ceremony
                 </p>
                 <h2 class="mb-4">Venue</h2>
                 <p class="fw-bold">St. Patrick's College Field, Ikot Ansa, Calabar</p>
-                <h2 class="mb-4 fw-bold">Tournament Objectives</h2>
+                <h2 class="mb-4 fw-bold">Tournament Format</h2>
                 <p class="fw-bold">
-                    Group of Eight Teams: Played as two brackets of four. The winner of each 
-                    bracket in Round-Robin Play will advance to the final to determine the Champion and Finalist. 
-                    Second-placed teams in each bracket will play for 3rd place (Consolation Match).
+                    Sixteen (16) teams played in four(4) brackets of four(4). The winner of each bracket in Round-Robin
+                    play will advance to the semi-final stage to determine the Champions.
                 </p>
                 <p class="text-danger fw-bold">
                     <strong>ATTENTION! ATTENTION! ATTENTION!</strong><br>
@@ -526,10 +501,10 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Visi Us</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>7 edemekpeyong st. Calabar Nigeria</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+1 (669) 305-9699</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@Seventy7Soccer.com</p>
+                    <h4 class="text-white mb-4">BellaTECH LTD</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>10 Ibrahim Bomai st. Guzape Abuja</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0816 054 9506</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>bellahteck@gmail.com</p>
                     <div class="d-flex pt-3">
                         <a class="btn btn-square btn-light rounded-circle me-2" href=""><i
                                 class="fab fa-twitter"></i></a>
@@ -609,7 +584,29 @@
     <script src="js/main.js"></script>
 
 
-    
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyDesDD02HnHhBFb-DUkHIIIOWZzHKm4yPo",
+          authDomain: "seventy7registration.firebaseapp.com",
+          projectId: "seventy7registration",
+          storageBucket: "seventy7registration.firebasestorage.app",
+          messagingSenderId: "256902697681",
+          appId: "1:256902697681:web:e1444b5f391d4a928fabf0",
+          measurementId: "G-9E7YE00PXG"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
 </body>
 
 </html>  

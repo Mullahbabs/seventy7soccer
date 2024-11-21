@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Send email
     if (mail($to, $subject, $message, $headers)) {
-        echo "Form submitted successfully.";
+        echo "Form submitted successfully, Team be contacted after verification and validation.";
     } else {
         echo "Failed to send email.";
     }
