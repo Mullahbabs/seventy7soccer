@@ -591,6 +591,7 @@
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
+        const database = firebase.database();
 
         const form = document.getElementById('registrationForm');
     form.addEventListener('submit', (event) => {
