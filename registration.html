@@ -199,7 +199,7 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <div class="form-floating">
+                                     <div class="form-floating">
                                         <input type="file" class="form-control" name="player2id" id="player2id" required>
                                         <label for="player2id">Player 2 ID Card</label>
                                     </div>
@@ -580,7 +580,7 @@
         const firebaseConfig = {
           apiKey: "AIzaSyDesDD02HnHhBFb-DUkHIIIOWZzHKm4yPo",
           authDomain: "seventy7registration.firebaseapp.com",
-          databaseURL: "https://seventy7registration-default-rtdb.firebaseio.com/"
+          databaseURL: "https://seventy7registration-default-rtdb.firebaseio.com/",
           projectId: "seventy7registration",
           storageBucket: "seventy7registration.firebasestorage.app",
           messagingSenderId: "256902697681",
@@ -634,16 +634,17 @@
         const logoRef = storage.ref(`team-logos/${logoFile.name}`);
         const logoSnapshot = await logoRef.put(logoFile);
         formData.teamLogoURL = await logoSnapshot.ref.getDownloadURL();
-    }
-});
+    
+    
 
   // Optionally, display a success message
   alert('Form submitted successfully!');
-});
+    
 
     </script>
 
     <script>
+        event.preventDefault();
         document.getElementById('registrationForm').addEventListener('submit', async (e) => {
           e.preventDefault(); // Prevent default form submission
       
@@ -671,4 +672,4 @@
       
 </body>
 
-</html>  
+</html>
