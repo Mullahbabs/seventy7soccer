@@ -153,7 +153,7 @@
                 <p class="fw-bold">
                     Teams will be contacted with further instructions upon information verification & validation.
                 </p>
-                <form id="registrationForm" action="submit_form.php" method="POST"  enctype="multipart/form-data">
+                <form id="registrationForm" method="POST"  enctype="multipart/form-data">
                     <div class="row g-3">
                         <!-- Team Details -->
                         <div class="col-sm-6">
@@ -364,7 +364,7 @@
                                 <label for="managerid">Manager ID Card</label>
                             </div>
                             <select class="form-select mt-2" name="manageridtype" required>
-                                <option value="" disabled selected>Select ID Type</option>
+                                <option value="select" disabled selected>Select ID Type</option>
                                 <option value="NIN">NIN</option>
                                 <option value="Drivers">Driver's License</option>
                                 <option value="Voters">Voter's Card</option>
@@ -591,7 +591,7 @@
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
 
-        const form = document.getElementById('seventy7registration');
+        const form = document.getElementById('registrationForm');
     form.addEventListener('submit', (event) => {
      event.preventDefault(); // Prevent default form submission
 
@@ -640,6 +640,33 @@
 });
 
     </script>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', async (e) => {
+          e.preventDefault(); // Prevent default form submission
+      
+          // Capture form data
+          const formData = {
+            teamName: document.getElementById('teamName').value,
+            idType: document.getElementById('idType').value,
+            photo: document.getElementById('photo').files[0]?.name, // You can also upload files to Firebase Storage
+          };
+      
+          try {
+            // Save to Firestore
+            await db.collection('registration').add(formData);
+      
+            // For Realtime Database (optional):
+            // await db.ref('registrations').push(formData);
+      
+            alert('Registration submitted successfully!');
+          } catch (error) {
+            console.error('Error saving data:', error);
+            alert('There was an error submitting your registration.');
+          }
+        });
+      </script>
+      
 </body>
 
 </html>  
