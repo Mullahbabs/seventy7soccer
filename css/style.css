@@ -424,6 +424,9 @@
 /*** Team ***/
 .team-item {
     position: relative;
+    width: 100;
+    top: 0;
+    left: 0;
     text-align: center;
     box-shadow: 0 0 45px rgba(0, 0, 0, .07);
 }
