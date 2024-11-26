@@ -920,108 +920,128 @@
     <script src="js/main.js"></script>
 
     <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
-      import {
-        getDatabase,
-        ref,
-        set,
-      } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
-      import {
-        getStorage,
-        ref as storageRef,
-        uploadBytes,
-        getDownloadURL,
-      } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-storage.js";
-      import {
-        getFirestore,
-        collection,
-        addDoc,
-      } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
-
-      // Firebase configuration
-      const firebaseConfig = {
-        apiKey: "AIzaSyCOypEJMkfB6wbzVXBx1d40g4FAuVvcB70",
-        authDomain: "seventy7soccer-cec85.firebaseapp.com",
-        databaseURL:
-          "https://seventy7soccer-cec85-default-rtdb.firebaseio.com/",
-        projectId: "seventy7soccer-cec85",
-        storageBucket: "seventy7soccer-cec85.firebasestorage.app",
-        messagingSenderId: "476540729937",
-        appId: "1:476540729937:web:d5b064e4c99dfd91a51670",
-      };
-
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-      const database = getDatabase(app);
-      const storage = getStorage(app);
-      const firestore = getFirestore(app);
-
-      // Form submission event
-      // Form submission event
-      const form = document.getElementById("registrationForm");
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault(); // Prevent default form submission
-
-        const formData = {
-          teamname: document.getElementById("teamname").value,
-          coachname: document.getElementById("coachname").value,
-          managername: document.getElementById("managername").value,
-          coachemail: document.getElementById("coachemail").value,
-          coachmobile: document.getElementById("coachmobile").value,
-          managermobile: document.getElementById("managermobile").value,
-          players: [],
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+        import {
+          getDatabase,
+          ref,
+          set,
+        } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
+        import {
+          getStorage,
+          ref as storageRef,
+          uploadBytes,
+          getDownloadURL,
+        } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-storage.js";
+        import {
+          getFirestore,
+          collection,
+          addDoc,
+        } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+      
+        // Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyCOypEJMkfB6wbzVXBx1d40g4FAuVvcB70",
+          authDomain: "seventy7soccer-cec85.firebaseapp.com",
+          databaseURL:
+            "https://seventy7soccer-cec85-default-rtdb.firebaseio.com/",
+          projectId: "seventy7soccer-cec85",
+          storageBucket: "seventy7soccer-cec85.firebasestorage.app",
+          messagingSenderId: "476540729937",
+          appId: "1:476540729937:web:d5b064e4c99dfd91a51670",
         };
-
-        // Collect player data and upload ID cards
-        for (let i = 1; i <= 8; i++) {
-          const player = {
-            name: document.getElementById(`player${i}name`).value, // Player name
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const database = getDatabase(app);
+        const storage = getStorage(app);
+        const firestore = getFirestore(app);
+      
+        // Cloudinary config
+        const cloudName = "dijs29rd9"; // Replace with your Cloudinary cloud name
+        const uploadPreset = "regUpload"; // Replace with your Cloudinary upload preset
+      
+        // Form submission event
+        const form = document.getElementById("registrationForm");
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault(); // Prevent default form submission
+      
+          const formData = {
+            teamname: document.getElementById("teamname").value,
+            coachname: document.getElementById("coachname").value,
+            managername: document.getElementById("managername").value,
+            coachemail: document.getElementById("coachemail").value,
+            coachmobile: document.getElementById("coachmobile").value,
+            managermobile: document.getElementById("managermobile").value,
+            players: [],
           };
-
-          // Upload player ID card (if any)
-          const fileInput = document.getElementById(`player${i}id`);
-          if (fileInput.files.length > 0) {
-            const file = fileInput.files[0];
-            const fileRef = storageRef(
-              storage,
-              `player-id-cards/player${i}/${file.name}`
-            );
-            const fileSnapshot = await uploadBytes(fileRef, file);
-            console.log("File uploaded:", fileSnapshot);
-
-            const fileURL = await getDownloadURL(fileSnapshot.ref);
-            console.log(`File URL for player ${i}:`, fileURL);
-
-            player.idCardURL = fileURL; // Save URL of the uploaded file
+      
+          // Collect player data and upload ID cards to Cloudinary
+          for (let i = 1; i <= 8; i++) {
+            const player = {
+              name: document.getElementById(`player${i}name`).value, // Player name
+            };
+      
+            // Upload player ID card (if any)
+            const fileInput = document.getElementById(`player${i}id`);
+            if (fileInput.files.length > 0) {
+              const file = fileInput.files[0];
+              const formDataCloudinary = new FormData();
+              formDataCloudinary.append("file", file);
+              formDataCloudinary.append("upload_preset", uploadPreset);
+      
+              // Send to Cloudinary
+              const cloudinaryResponse = await fetch(
+                `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,
+                {
+                  method: "POST",
+                  body: formDataCloudinary,
+                }
+              );
+              const cloudinaryData = await cloudinaryResponse.json();
+              console.log("Cloudinary response:", cloudinaryData);
+      
+              const fileURL = cloudinaryData.secure_url; // URL from Cloudinary
+              player.idCardURL = fileURL; // Save URL of the uploaded file
+            }
+      
+            formData.players.push(player); // Add player object to players array
           }
-          console.log(fileInput.files);
-          formData.players.push(player); // Add player object to players array
-        }
-
-
-        console.log(formData);
-
-        // Upload team logo
-        const teamLogoInput = document.getElementById("teamlogo");
-        if (teamLogoInput.files.length > 0) {
-          const logoFile = teamLogoInput.files[0];
-          const logoRef = storageRef(storage, `team-logos/${logoFile.name}`);
-          const logoSnapshot = await uploadBytes(logoRef, logoFile);
-          formData.teamLogoURL = await getDownloadURL(logoSnapshot.ref);
-        }
-
-        try {
-          // Save form data to Firestore
-          await addDoc(collection(firestore, "registration"), formData);
-
-          alert("Form submitted successfully!");
-        } catch (error) {
-          console.error("Error saving data:", error);
-          alert("There was an error submitting your registration.");
-        }
-      });
-    </script>
+      
+          console.log(formData);
+      
+          // Upload team logo to Cloudinary
+          const teamLogoInput = document.getElementById("teamlogo");
+          if (teamLogoInput.files.length > 0) {
+            const logoFile = teamLogoInput.files[0];
+            const formDataLogoCloudinary = new FormData();
+            formDataLogoCloudinary.append("file", logoFile);
+            formDataLogoCloudinary.append("upload_preset", uploadPreset);
+      
+            // Send team logo to Cloudinary
+            const logoCloudinaryResponse = await fetch(
+              `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,
+              {
+                method: "POST",
+                body: formDataLogoCloudinary,
+              }
+            );
+            const logoCloudinaryData = await logoCloudinaryResponse.json();
+            formData.teamLogoURL = logoCloudinaryData.secure_url; // Get the URL of the team logo
+          }
+      
+          try {
+            // Save form data to Firestore
+            await addDoc(collection(firestore, "registration"), formData);
+      
+            alert("Form submitted successfully!");
+          } catch (error) {
+            console.error("Error saving data:", error);
+            alert("There was an error submitting your registration.");
+          }
+        });
+      </script>
+      
   </body>
 </html>
