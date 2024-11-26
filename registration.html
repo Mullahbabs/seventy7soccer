@@ -1035,7 +1035,7 @@
             // Save form data to Firestore
             await addDoc(collection(firestore, "registration"), formData);
       
-            alert("Form submitted successfully!");
+            alert("Form submitted successfully! Teams will be contacted upon Verification and Validation of information");
           } catch (error) {
             console.error("Error saving data:", error);
             alert("There was an error submitting your registration.");
