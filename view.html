@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Registration - Seventy7Soccer</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        role="status"
+        style="width: 3rem; height: 3rem"
+      ></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-primary text-white d-none d-lg-flex">
+      <div class="container py-3">
+        <div class="d-flex align-items-center">
+          <a href="index.html">
+            <h2 class="text-white fw-bold m-0">Seventy7Soccer</h2>
+          </a>
+          <div class="ms-auto d-flex align-items-center">
+            <small class="ms-4"
+              ><i class="fa fa-map-marker-alt me-3"></i>10 Ibrahim Bomai. Guzape
+              Abuja, NG.</small
+            >
+            <small class="ms-4"
+              ><i class="fa fa-envelope me-3"></i>bellahteck@gmail.com</small
+            >
+            <small class="ms-4"
+              ><i class="fa fa-phone-alt me-3"></i>+234 816 054 9506</small
+            >
+            <div class="ms-3 d-flex">
+              <a
+                class="btn btn-sm-square btn-light text-primary rounded-circle ms-2"
+                href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                class="btn btn-sm-square btn-light text-primary rounded-circle ms-2"
+                href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                class="btn btn-sm-square btn-light text-primary rounded-circle ms-2"
+                href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-white sticky-top">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
+          <a href="index.html" class="navbar-brand d-lg-none">
+            <h1 class="fw-bold m-0">Seventy7soccer</h1>
+          </a>
+          <button
+            type="button"
+            class="navbar-toggler me-0"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+              <a
+                href=""
+                class="nav-item nav-link text-primary"
+                style="font-weight: bolder"
+                >TEAM Submissions</a
+              >
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div
+      class="container-fluid page-header py-5 mb-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container text-center py-5">
+        <h1 class="display-2 text-primary mb-4 animated slideInDown">
+          Tournament Registration
+        </h1>
+      </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Quote Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="row g-5">
+          <!-- Event Details Section -->
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            <h1 class="fw-medium text-primary">
+              Team Name - Efilay Babes FC.
+            </h1>
+            <h2 class="mb-4">Principals</h2>
+            <p class="fw-bold">
+              * Coach Name: <span class="text-primary">Efilay</span><br>
+              * Coach Email: <span class="text-primary">christopherrachael8@gmail.com</span><br>
+              * Coach Mobile: <span class="text-primary">09033706267</span><br>
+              * Manager Name: <span class="text-primary">Rachael Joseph Christopher</span><br>
+              * Manager Mobile: <span class="text-primary">09033706267</span><br>
+            </p>
+          </div>
+
+          <!-- Registration Form Section -->
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+              <div class="row g-3">
+                <!-- Team Details -->
+                <!-- Player Details -->
+                <div id="player-details">
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="player1"
+                          id="player1name"
+                          placeholder="Player 1 Name"
+                        />
+                        <label for="player1name">Abigail Awak</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <a href="https://res.cloudinary.com/dq8qhbdor/image/upload/v1736937244/akgfkmc9w09nhljuo99x.jpg">Player 1 ID Card</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="player2"
+                          id="player2name"
+                          placeholder="Player 2 Name"
+                        />
+                        <label for="player1name">Anny Essien </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="https://res.cloudinary.com/dq8qhbdor/image/upload/v1736937245/nnn5od4wfb4pcji5bvis.jpg">Player 2 ID Card</a>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="player3"
+                          id="player3name"
+                          placeholder="Player 3 Name"
+                        />
+                        <label for="player3name">Queen Ita</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <a href="https://res.cloudinary.com/dq8qhbdor/image/upload/v1736937248/lbhxn1cs2zkni5syzxiv.jpg">Player 3 ID Card</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="player4"
+                          id="player4name"
+                          placeholder="Player 4 Name"
+                        />
+                        <label for="player4name">Ekaette George</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <a href="https://res.cloudinary.com/dq8qhbdor/image/upload/v1736937254/k5br2frxyinrgc9gukyh.jpg">Player 4 ID Card</a>
+                      </div>
+                    </div>  
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="player5"
+                          id="player5name"
+                          placeholder="Player 5 Name"
+                        />
+                        <label for="player5name">Enyitemi Omagbemi</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <a href="https://res.cloudinary.com/dq8qhbdor/image/upload/v1736937325/fmjevzgjc1bip4mltdbc.jpg">Player 5 ID Card</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="player6"
+                          id="player6name"
+                          placeholder="Player 6 Name"
+                        />
+                        <label for="player6name">Racheal Joseph Christopher</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <a href="https://res.cloudinary.com/dq8qhbdor/image/upload/v1736937239/l6pgbbsxinrl7zc8gyxt.jpg">Player 6 ID Card</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>      
+        </div>
+      </div>
+    </div>
+    <!-- Quote Start -->
+
+    <!-- Quote Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="row g-5">
+          <!-- Event Details Section -->
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            <h1 class="fw-medium text-primary">
+              Team Name - Starlets FC.
+            </h1>
+            <h2 class="mb-4">Principals</h2>
+            <p class="fw-bold">
+              * Coach Name: <span class="text-primary">Samuel Gideon Bassey</span><br>
+              * Coach Email: <span class="text-primary">gideonsamuel142@gmail.com</span><br>
+              * Coach Mobile: <span class="text-primary">09064438844</span><br>
+              * Manager Name: <span class="text-primary">TAMBE FELIX OTU </span><br>
+              * Manager Mobile: <span class="text-primary">08140169402</span><br>
+              * Team Logo: <a href="https://res.cloudinary.com/dq8qhbdor/image/upload/v1736090603/muigulbxgev4pdokguqe.jpg">Starlets Fc Logo</a>
+            </p>
+          </div>
+
+          <!-- Registration Form Section -->
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+              <div class="row g-3">
+                <!-- Team Details -->
+                <!-- Player Details -->
+                <div id="player-details">
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="player1"
+                          id="player1name"
+                          placeholder="Player 1 Name"
+                        />
+                        <label for="player1name">OBINNA JESSICA NMESOMA</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <a href="https://res.cloudinary.com/dq8qhbdor/image/upload/v1736090596/ncmpfx3l6a5kqmko64ln.jpg">Player 1 ID Card</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="player2"
+                          id="player2name"
+                          placeholder="Player 2 Name"
+                        />
+                        <label for="player1name">EKPEYONG GRACE ANWAKANG</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="https://res.cloudinary.com/dq8qhbdor/image/upload/v1736090597/iysqhpytyqaqgfttt5hc.jpg">Player 2 ID Card</a>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="player3"
+                          id="player3name"
+                          placeholder="Player 3 Name"
+                        />
+                        <label for="player3name">GLORY JUMBO ETTAH</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <a href="https://res.cloudinary.com/dq8qhbdor/image/upload/v1736090598/kitmdkciicxpo8lcbh6k.jpg">Player 3 ID Card</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="player4"
+                          id="player4name"
+                          placeholder="Player 4 Name"
+                        />
+                        <label for="player4name">ENYI REGINA OTAMUNG</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <a href="https://res.cloudinary.com/dq8qhbdor/image/upload/v1736090599/menz8gyxz7qeltucbr8p.jpg">Player 4 ID Card</a>
+                      </div>
+                    </div>  
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="player5"
+                          id="player5name"
+                          placeholder="Player 5 Name"
+                        />
+                        <label for="player5name">DONBRAYE EYENEMU-EYE PROGRESS</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <a href="https://res.cloudinary.com/dq8qhbdor/image/upload/v1736090600/dma6u4lqx5wjz5hu32oc.jpg">Player 5 ID Card</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="player6"
+                          id="player6name"
+                          placeholder="Player 6 Name"
+                        />
+                        <label for="player6name">AMAH OLUCHI PHILLIP</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <a href="https://res.cloudinary.com/dq8qhbdor/image/upload/v1736090601/fspunquubeeact9nxooa.jpg">Player 6 ID Card</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="player6"
+                          id="player6name"
+                          placeholder="Player 6 Name"
+                        />
+                        <label for="player6name">ADOGA MERCY OMGBONYA</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <a href="https://res.cloudinary.com/dq8qhbdor/image/upload/v1736090601/bjgqwz42zgpmqrogh3bs.jpg">Player 7 ID Card</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="player6"
+                          id="player6name"
+                          placeholder="Player 6 Name"
+                        />
+                        <label for="player6name">ALICE MBANG AKA</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <a href="https://res.cloudinary.com/dq8qhbdor/image/upload/v1736090602/zhuk9eeu3ax6kyfymagl.jpg">Player 8 ID Card</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>      
+        </div>
+      </div>
+    </div>
+    <!-- Quote Start -->
+
+    <!-- Quote Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="row g-5">
+          <!-- Event Details Section -->
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            <h1 class="fw-medium text-primary">
+              Team Name - Greatest Tomorrow FC.
+            </h1>
+            <h2 class="mb-4">Principals</h2>
+            <p class="fw-bold">
+              * Coach Name: <span class="text-primary">Anderson Anderson</span><br>
+              * Coach Email: <span class="text-primary">andersonanderson11@gmail.com</span><br>
+              * Coach Mobile: <span class="text-primary">08084749846</span><br>
+              * Manager Name: <span class="text-primary">Eteng Eteng Omin</span><br>
+              * Manager Mobile: <span class="text-primary">08038041783</span><br>
+              * Team Logo: <a href="https://res.cloudinary.com/dq8qhbdor/image/upload/v1736508988/qi1blwrdqtnehten0nys.jpg">Greatest Tomorrow Fc</a>
+            </p>
+          </div>
+
+          <!-- Registration Form Section -->
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+              <div class="row g-3">
+                <!-- Team Details -->
+                <!-- Player Details -->
+                <div id="player-details">
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="player1"
+                          id="player1name"
+                          placeholder="Player 1 Name"
+                        />
+                        <label for="player1name">Grace Peter Etim</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <a href="https://res.cloudinary.com/dq8qhbdor/image/upload/v1736508971/eipdyvzczavrrm9gj0bi.jpg">Player 1 ID Card</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="player2"
+                          id="player2name"
+                          placeholder="Player 2 Name"
+                        />
+                        <label for="player1name">Bright Ebuk </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="https://res.cloudinary.com/dq8qhbdor/image/upload/v1736508972/tg4bryarauwdm0dkfssc.jpg">Player 2 ID Card</a>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="player3"
+                          id="player3name"
+                          placeholder="Player 3 Name"
+                        />
+                        <label for="player3name">Orie Etoti Okwe</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <a href="https://res.cloudinary.com/dq8qhbdor/image/upload/v1736508973/wtsqjkrpognq4tmkrjfz.jpg">Player 3 ID Card</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="player4"
+                          id="player4name"
+                          placeholder="Player 4 Name"
+                        />
+                        <label for="player4name">Rose Archibong</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <a href="https://res.cloudinary.com/dq8qhbdor/image/upload/v1736508975/oppmgojrjszoo1zr1icn.jpg">Player 4 ID Card</a>
+                      </div>
+                    </div>  
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="player5"
+                          id="player5name"
+                          placeholder="Player 5 Name"
+                        />
+                        <label for="player5name">Esther Emmanuel</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <a href="https://res.cloudinary.com/dq8qhbdor/image/upload/v1736508976/vnog0jmxwyaj0maccfbg.jpg">Player 5 ID Card</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="player6"
+                          id="player6name"
+                          placeholder="Player 6 Name"
+                        />
+                        <label for="player6name">Oku Peace Innocent</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <a href="https://res.cloudinary.com/dq8qhbdor/image/upload/v1736508980/wxnkqn4wjwn6axcnnjd8.jpg">Player 6 ID Card</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="player6"
+                          id="player6name"
+                          placeholder="Player 6 Name"
+                        />
+                        <label for="player6name">Effiom Anyuk</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <a href="https://res.cloudinary.com/dq8qhbdor/image/upload/v1736508982/wltk53c2cblggw24lm60.jpg">Player 7 ID Card</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="player6"
+                          id="player6name"
+                          placeholder="Player 6 Name"
+                        />
+                        <label for="player6name">Inyene Ekpo</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <a href="https://res.cloudinary.com/dq8qhbdor/image/upload/v1736508986/wa71oe8eqrth52cjjrup.jpg">Player 8 ID Card</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>      
+        </div>
+      </div>
+    </div>
+    <!-- Quote Start -->
+
+    
+
+    <!-- Footer Start -->
+    <div
+      class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-white mb-4">BellaTECH LTD</h4>
+            <p class="mb-2">
+              <i class="fa fa-map-marker-alt me-3"></i>10 Ibrahim Bomai st.
+              Guzape Abuja
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt me-3"></i>0816 054 9506
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope me-3"></i>bellahteck@gmail.com
+            </p>
+            <div class="d-flex pt-3">
+              <a class="btn btn-square btn-light rounded-circle me-2" href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a class="btn btn-square btn-light rounded-circle me-2" href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="btn btn-square btn-light rounded-circle me-2" href=""
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a class="btn btn-square btn-light rounded-circle me-2" href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-white mb-4">Quick Links</h4>
+            <a class="btn btn-link" href="">About Us</a>
+            <a class="btn btn-link" href="">Contact Us</a>
+            <a class="btn btn-link" href="">Our Academies</a>
+            <a class="btn btn-link" href="">Terms & Condition</a>
+            <a class="btn btn-link" href="">Support</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-white mb-4">Newsletter</h4>
+            <p>
+              Stay with us by the day with our all inclusive newsletters by
+              signing up.
+            </p>
+            <div class="position-relative w-100">
+              <input
+                class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
+                type="text"
+                placeholder="Your email"
+              />
+              <button
+                type="button"
+                class="btn btn-light py-2 position-absolute top-0 end-0 mt-2 me-2"
+              >
+                SignUp
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            &copy;
+            <a class="fw-medium text-light" href="#">Seventy7Soccer.com</a>, All
+            Right Reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+            Designed & powered by<a
+              class="fw-medium text-light"
+              href="https://bellahteck.com"
+              >BellaTECH LTD.</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/6747b8a02480f5b4f5a4e487/1ido2id76';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-firestore.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+        import {
+          getDatabase,
+          ref,
+          set,
+        } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
+        import {
+          getStorage,
+          ref as storageRef,
+          uploadBytes,
+          getDownloadURL,
+        } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-storage.js";
+        import {
+          getFirestore,
+          collection,
+          addDoc,
+        } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+      
+        // Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyCOypEJMkfB6wbzVXBx1d40g4FAuVvcB70",
+          authDomain: "seventy7soccer-cec85.firebaseapp.com",
+          databaseURL:
+            "https://seventy7soccer-cec85-default-rtdb.firebaseio.com/",
+          projectId: "seventy7soccer-cec85",
+          storageBucket: "seventy7soccer-cec85.firebasestorage.app",
+          messagingSenderId: "476540729937",
+          appId: "1:476540729937:web:d5b064e4c99dfd91a51670",
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const database = getDatabase(app);
+        const storage = getStorage(app);
+        const firestore = getFirestore(app);
+      
+        // Cloudinary config
+        const cloudName = "dq8qhbdor"; // Replace with your Cloudinary cloud name
+        const uploadPreset = "regUpload"; // Replace with your Cloudinary upload preset
+      
+        // Form submission event
+        const form = document.getElementById("registrationForm");
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault(); // Prevent default form submission
+      
+          const formData = {
+            teamname: document.getElementById("teamname").value,
+            coachname: document.getElementById("coachname").value,
+            managername: document.getElementById("managername").value,
+            coachemail: document.getElementById("coachemail").value,
+            coachmobile: document.getElementById("coachmobile").value,
+            managermobile: document.getElementById("managermobile").value,
+            players: [],
+          };
+      
+          // Collect player data and upload ID cards to Cloudinary
+          for (let i = 1; i <= 8; i++) {
+            const player = {
+              name: document.getElementById(`player${i}name`).value, // Player name
+            };
+      
+            // Upload player ID card (if any)
+            const fileInput = document.getElementById(`player${i}id`);
+            if (fileInput.files.length > 0) {
+              const file = fileInput.files[0];
+              const formDataCloudinary = new FormData();
+              formDataCloudinary.append("file", file);
+              formDataCloudinary.append("upload_preset", uploadPreset);
+      
+              // Send to Cloudinary
+              const cloudinaryResponse = await fetch(
+                `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,
+                {
+                  method: "POST",
+                  body: formDataCloudinary,
+                }
+              );
+              const cloudinaryData = await cloudinaryResponse.json();
+              console.log("Cloudinary response:", cloudinaryData);
+      
+              const fileURL = cloudinaryData.secure_url; // URL from Cloudinary
+              player.idCardURL = fileURL; // Save URL of the uploaded file
+            }
+      
+            formData.players.push(player); // Add player object to players array
+          }
+      
+          console.log(formData);
+      
+          // Upload team logo to Cloudinary
+          const teamLogoInput = document.getElementById("teamlogo");
+          if (teamLogoInput.files.length > 0) {
+            const logoFile = teamLogoInput.files[0];
+            const formDataLogoCloudinary = new FormData();
+            formDataLogoCloudinary.append("file", logoFile);
+            formDataLogoCloudinary.append("upload_preset", uploadPreset);
+      
+            // Send team logo to Cloudinary
+            const logoCloudinaryResponse = await fetch(
+              `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,
+              {
+                method: "POST",
+                body: formDataLogoCloudinary,
+              }
+            );
+            const logoCloudinaryData = await logoCloudinaryResponse.json();
+            formData.teamLogoURL = logoCloudinaryData.secure_url; // Get the URL of the team logo
+          }
+      
+          try {
+            // Save form data to Firestore
+            await addDoc(collection(firestore, "registration"), formData);
+      
+            alert("Form submitted successfully! Teams will be contacted upon Verification and Validation of information");
+          } catch (error) {
+            console.error("Error saving data:", error);
+            alert("There was an error submitting your registration.");
+          }
+        });
+      </script>
+      
+  </body>
+</html>
